@@ -12,7 +12,7 @@ h1, h2 {
 }
 
 a {
-    color: #BB86FC; /* Light purple for links */
+    color: #FF0000; /* Red color for links */
     text-decoration: none;
 }
 
@@ -41,7 +41,7 @@ a:hover {
 
 .mod h3 {
     margin-top: 0;
-    color: #BB86FC; /* Light purple for mod titles */
+    color: #FF0000; /* Red color for mod titles */
 }
 
 .mod p {
@@ -51,7 +51,7 @@ a:hover {
 .mod a {
     display: inline-block;
     margin-top: 10px;
-    color: #03DAC6; /* Teal color for links */
+    color: #FF0000; /* Red color for links */
 }
 
 .mod a:hover {
