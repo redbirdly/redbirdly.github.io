@@ -1,32 +1,47 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text color */
+    margin: 0;
     padding: 20px;
-    background-color: #f9f9f9;
 }
 
-h1 {
-    color: #333;
+h1, h2 {
+    color: #FFFFFF; /* White text for headings */
 }
 
-h2 {
-    color: #666;
+a {
+    color: #BB86FC; /* Light purple for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mods Section */
+#mods {
+    margin-top: 20px;
 }
 
 .mod {
-    border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #1E1E1E; /* Darker background for mod containers */
+    border: 1px solid #333333; /* Border color for containers */
+    border-radius: 5px;
+    padding: 15px;
     margin-bottom: 20px;
-    background-color: #fff;
 }
 
 .mod img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 .mod h3 {
     margin-top: 0;
+    color: #BB86FC; /* Light purple for mod titles */
 }
 
 .mod p {
@@ -36,8 +51,7 @@ h2 {
 .mod a {
     display: inline-block;
     margin-top: 10px;
-    text-decoration: none;
-    color: #0066cc;
+    color: #03DAC6; /* Teal color for links */
 }
 
 .mod a:hover {
