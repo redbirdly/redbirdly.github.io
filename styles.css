@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #666;
+}
+
+.mod {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.mod img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mod h3 {
+    margin-top: 0;
+}
+
+.mod p {
+    font-size: 1em;
+}
+
+.mod a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.mod a:hover {
+    text-decoration: underline;
+}
