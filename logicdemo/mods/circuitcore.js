@@ -1,11 +1,3 @@
-if (!enabledMods.includes("mods/betterSettings.js")) { enabledMods.unshift("mods/betterSettings.js"); localStorage.setItem("enabledMods", JSON.stringify(enabledMods)); window.location.reload() };
-
-var cc_settingsTab = new SettingsTab("CircuitCore");
-var cc_setting1 = new Setting("Example Setting 1", "element", settingType.TEXT, false, "1");
-var cc_setting2 = new Setting("Example Setting 2", "element", settingType.TEXT, false, "2");
-cc_settingsTab.registerSettings("Setting 1", cc_setting1);
-cc_settingsTab.registerSettings("Setting 2", cc_setting2);
-settingsManager.registerTab(cc_settingsTab);
 
 function hexToPixelGrid(hex) {
 	var hexDigits = [
