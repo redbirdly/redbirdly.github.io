@@ -1,0 +1,74 @@
+<h1 id="circuitcore-js-documentation">CircuitCore.js Documentation</h1>
+<p>Welcome to the CircuitCore.js documentation.
+This file provides an overview and basic documentation for each circuit type available in the circuitcore.js mod.
+The circuits are categorized by their functionality and color-coded for easy identification.
+LogicGates.js is required for CircuitCore.js.
+You can also rotate circuits using the up arrow key.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<p>ROM/RAM
+Encoders and De-multiplexers
+Decoders and Multiplexers
+Program Counter and Shift Registers
+Registers
+Latches and Flip-Flops
+Addition/Subtraction Arithmetic
+Complex Circuits
+Clocks
+$Misc and I/O
+Displays/Visual Circuits</p>
+<h2 id="rom-ram-red">ROM/RAM: Red</h2>
+<p>ROM Circuit
+Description: Read-only memory circuit used for storing permanent data. N bit address lines on the left and 4 bit output on the right. Each hex value in ROM is color-coded one of 16 colors.</p>
+<h2 id="encoders-and-de-multiplexers-orange">Encoders and De-multiplexers: Orange</h2>
+<p>N-to-M Encoder Circuit
+Description: Encodes N one-hot input lines on the bottom into M output lines. There are two copies of the output lines, on the left and right. N = 2^M.</p>
+<p>1-to-M De-multiplexer Circuit
+Description: De-multiplexes 1 input line on the bottom into M output lines on the right based on the N input lines on the left. M = 2^N.</p>
+<h2 id="decoders-and-multiplexers-yellow">Decoders and Multiplexers: Yellow</h2>
+<p>N-to-M Decoder Circuit
+Description: Decodes N input lines on the bottom into M one-hot output lines on the left and right (mirrored). M = 2^N.</p>
+<p>N-to-M Multiplexer Circuit
+Description: Multiplexes N input lines on the left into 1 output line on the right using M input lines on the bottom.</p>
+<h2 id="program-counter-and-shift-registers-lime">Program Counter and Shift Registers: Lime</h2>
+<p>4-bit PISO Shift Register Circuit
+Description: A Parallel In Serial Out shift register. Parallel data comes from the top and comes out in serial through the first right output line. Second right output line signifies if the data is currently being transferred, first input line on the left controls when to send start parallel to serial conversion, second input line on the left is clock input.</p>
+<p>4-bit SIPO Shift Register Circuit
+Description: A Serial In Parallel Out shift register. Serial data comes from the first left input line and is converted to parallel output through the four right output lines. The second left input line is the clock input, and the register shifts data on the rising edge of the clock signal.</p>
+<h2 id="registers-green">Registers: Green</h2>
+<p>4-bit Register Circuit
+Description: General-purpose register for storing 4-bit data. Four input bits of input data come from the top. The first right pin is enable, it allows the write enable to work and outputs the stored value in the register. The second right pin is write enable, it allows the input data to get written to the register, it will only work if the first enable pin is also on.</p>
+<h2 id="latches-and-flip-flops-light-blue">Latches and Flip-Flops: Light Blue</h2>
+<p>SR Latch Circuit
+Description: Set-Reset latch for basic memory storage. Enable the top pin to activate the outputs on the left and right, Enable the bottom pin to disable the outputs on the left and right.</p>
+<p>T Flip-Flop Circuit
+Description: Toggle flip-flop for binary counting and state storage. When the top input has a rising edge, the state of the left and right pins toggles.</p>
+<p>D Latch Circuit
+Description: A D latch circuit for data storage. The data input is on the top, and the enable input is on the right. When the enable input is active, the data input is stored and outputted on the left and bottom.</p>
+<p>D Flip-Flop Circuit
+Description: A D flip-flop circuit for edge-triggered data storage. The data input is on the top, and the control input is on the right. The data is transferred to the output on the left and bottom sides on the rising edge of the control input.</p>
+<p>4-bit D Latch Circuit
+Description: A 4-bit D latch for storing 4-bit data. The data inputs are on the top (D0-D3) and the control input is on the right. When the control input is active, the data inputs are stored and outputted on the bottom (Q0-Q3).</p>
+<p>4-bit D Flip-Flop Circuit
+Description: A 4-bit D flip-flop for edge-triggered data storage. The data inputs are on the top (D0-D3) and the control input is on the right. The data is transferred to the output on the bottom (Q0-Q3) on the rising edge of the control input.</p>
+<h2 id="addition-subtraction-arithmetic-blue">Addition/Subtraction Arithmetic: Blue</h2>
+<p>4-bit Adder Circuit
+Description: Performs binary addition on two 4-bit numbers. The first 4-bit number inputs are on the left (A0-A3), the second 4-bit number inputs are on the right (B0-B3), and the carry-in input is on the far right. The sum outputs are on the bottom (S0-S3) and the carry-out is on the far left.</p>
+<p>4-bit Incrementer Circuit
+Description: Increments 4-bit binary numbers by one. The 4-bit number inputs are on the top (N0-N3), and the increment control input is on the left. The incremented value outputs are on the bottom (Q0-Q3) and the carry-out is on the right.</p>
+<h2 id="complex-circuits-lavender">Complex Circuits: Lavender</h2>
+<p>No complex circuits have been added yet.</p>
+<h2 id="clocks">Clocks</h2>
+<p>Slow/Medium/Fast/Very Fast Clock
+Description: Provides a customizable timing signal for synchronizing circuits like D flip flops.</p>
+<h2 id="misc-and-i-o-brown">Misc and I/O: Brown</h2>
+<p>4-bit Enabler Circuit
+Description: If the right enable input is active, the top input data gets copied to the bottom, if the side input is disabled, the output data is empty. The left output mirrors the right enable input.</p>
+<p>Randomizer
+Description: Generates random output signals.</p>
+<p>4-bit Randomizer Circuit
+Description: Generates random 4-bit output signals on the bottom. Whenever the top input has a rising edge, it generates a new random 4-bit number.</p>
+<h2 id="displays-visual-circuits-white">Displays/Visual Circuits: White</h2>
+<p>Simple Seven Segment Display
+Description: Displays numerical output using seven segments.</p>
+<p>Simple Double Seven Segment Display
+Description: Displays numerical output using two seven-segment displays.</p>
