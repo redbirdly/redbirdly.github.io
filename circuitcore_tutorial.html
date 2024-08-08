@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <h2 id="introduction">Introduction</h2>
-    <p><strong>Sandboxels</strong> is a sandbox game where players can create and manipulate elements on a grid, similar to falling sand games. It allows for extensive creativity and experimentation with various materials and circuits, enabling players to design and test their own simulations and contraptions.</p>
-    <p><strong>CircuitCore.js</strong> is a mod for the sandbox game <strong>Sandboxels</strong> that provides a variety of digital circuits for building complex electronic systems. It extends the functionality of the game by introducing advanced logic components and circuits that can be used to create intricate logic systems, memory storage, and arithmetic operations.</p>    
-    <p><strong>LogicGates.js</strong> is another mod required for CircuitCore.js, which provides basic logic gates like AND, OR, and XOR. CircuitCore.js builds upon these basic logic gates by offering more advanced components such as registers, counters, and various types of shift registers.</p>
-
-
     <title>CircuitCore.js Documentation</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -49,18 +42,32 @@
         #clocks-pink { color: #ff99ff; }
         #misc-and-i-o-brown { color: #8d6e63; }
         #displays-visual-circuits-white { color: #ffffff; }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
     <h1 id="circuitcore-js-documentation">CircuitCore.js Documentation</h1>
+    
+    <h2 id="introduction">Introduction</h2>
+    <p><strong>Sandboxels</strong> is a sandbox game where players can create and manipulate elements on a grid, similar to falling sand games. It provides a flexible environment for experimentation with various materials and circuits, allowing players to design and test their own simulations and contraptions. Learn more about <a href="https://sandboxels.example.com">Sandboxels</a>.</p>
+    
+    <p><strong>LogicGates.js</strong> is a mod for Sandboxels that adds basic digital logic gates, such as AND, OR, and XOR. This mod builds on the core functionality of Sandboxels by providing essential building blocks for creating simple digital circuits and logical systems. Check out the <a href="logicgates.html">LogicGates.js Documentation</a>.</p>
+    
+    <p><strong>CircuitCore.js</strong> is an advanced mod that extends the functionality of LogicGates.js by introducing more complex and sophisticated circuits. While LogicGates.js adds fundamental logic gates to Sandboxels, CircuitCore.js builds on these basics to offer advanced components like registers, counters, shift registers, and various arithmetic circuits. This mod enables players to design and construct intricate electronic systems and simulations.</p>
+
     <p>Welcome to the CircuitCore.js documentation.
-    This file provides an overview and basic documentation for each circuit type available in the circuitcore.js mod.
+    This file provides an overview and basic documentation for each circuit type available in the CircuitCore.js mod.
     The circuits are categorized by their functionality and color-coded for easy identification.
     LogicGates.js is required for CircuitCore.js.
     You can also rotate circuits using the up arrow key.</p>
 
     <h2 id="table-of-contents">Table of Contents</h2>
-    <p>ROM/RAM<br>
+    <p><a href="index.html">Back to Mods</a><br>
+    ROM/RAM<br>
     Encoders and De-multiplexers<br>
     Decoders and Multiplexers<br>
     Program Counter and Shift Registers<br>
@@ -75,69 +82,87 @@
     <h2 id="rom-ram-red">ROM/RAM: Red</h2>
     <p>ROM Circuit<br>
     Description: Read-only memory circuit used for storing permanent data. N bit address lines on the left and 4 bit output on the right. Each hex value in ROM is color-coded one of 16 colors.</p>
-    <p>The circuit is not included in-game yet because i need to add more tools to program the ROM.</p>
+    <p>The circuit is not included in-game yet because I need to add more tools to program the ROM.</p>
+    <img src="images/rom-circuit.png" alt="ROM Circuit">
 
     <h2 id="encoders-and-de-multiplexers-orange">Encoders and De-multiplexers: Orange</h2>
     <p>N-to-M Encoder Circuit<br>
     Description: Encodes N one-hot input lines on the bottom into M output lines. There are two copies of the output lines, on the left and right. N = 2^M.</p>
+    <img src="images/n-to-m-encoder.png" alt="N-to-M Encoder Circuit">
     <p>1-to-M De-multiplexer Circuit<br>
     Description: De-multiplexes 1 input line on the bottom into M output lines on the right based on the N input lines on the left. M = 2^N.</p>
+    <img src="images/1-to-m-demux.png" alt="1-to-M De-multiplexer Circuit">
 
     <h2 id="decoders-and-multiplexers-yellow">Decoders and Multiplexers: Yellow</h2>
     <p>N-to-M Decoder Circuit<br>
     Description: Decodes N input lines on the bottom into M one-hot output lines on the left and right (mirrored). M = 2^N.</p>
+    <img src="images/n-to-m-decoder.png" alt="N-to-M Decoder Circuit">
     <p>N-to-M Multiplexer Circuit<br>
     Description: Multiplexes N input lines on the left into 1 output line on the right using M input lines on the bottom.</p>
+    <img src="images/n-to-m-mux.png" alt="N-to-M Multiplexer Circuit">
 
     <h2 id="program-counter-and-shift-registers-lime">Program Counter and Shift Registers: Lime</h2>
     <p>4-bit PISO Shift Register Circuit<br>
     Description: A Parallel In Serial Out shift register. Parallel data comes from the top and comes out in serial through the first right output line. Second right output line signifies if the data is currently being transferred, first input line on the left controls when to send start parallel to serial conversion, second input line on the left is clock input.</p>
+    <img src="images/piso-shift-register.png" alt="4-bit PISO Shift Register Circuit">
     <p>4-bit SIPO Shift Register Circuit<br>
     Description: A Serial In Parallel Out shift register. Serial data comes from the first left input line and is converted to parallel output through the four right output lines. The second left input line is the clock input, and the register shifts data on the rising edge of the clock signal.</p>
+    <img src="images/sipo-shift-register.png" alt="4-bit SIPO Shift Register Circuit">
 
     <h2 id="registers-green">Registers: Green</h2>
     <p>4-bit Register Circuit<br>
     Description: General-purpose register for storing 4-bit data. Four input bits of input data come from the top. The first right pin is enable, it allows the write enable to work and outputs the stored value in the register. The second right pin is write enable, it allows the input data to get written to the register, it will only work if the first enable pin is also on.</p>
+    <img src="images/4-bit-register.png" alt="4-bit Register Circuit">
 
     <h2 id="latches-and-flip-flops-light-blue">Latches and Flip-Flops: Light Blue</h2>
     <p>SR Latch Circuit<br>
     Description: Set-Reset latch for basic memory storage. Enable the top pin to activate the outputs on the left and right, Enable the bottom pin to disable the outputs on the left and right.</p>
+    <img src="images/sr-latch.png" alt="SR Latch Circuit">
     <p>T Flip-Flop Circuit<br>
     Description: Toggle flip-flop for binary counting and state storage. When the top input has a rising edge, the state of the left and right pins toggles.</p>
+    <img src="images/t-flip-flop.png" alt="T Flip-Flop Circuit">
     <p>D Latch Circuit<br>
     Description: A D latch circuit for data storage. The data input is on the top, and the enable input is on the right. When the enable input is active, the data input is stored and outputted on the left and bottom.</p>
+    <img src="images/d-latch.png" alt="D Latch Circuit">
     <p>D Flip-Flop Circuit<br>
-    Description: A D flip-flop circuit for edge-triggered data storage. The data input is on the top, and the control input is on the right. The data is transferred to the output on the left and bottom sides on the rising edge of the control input.</p>
+    Description: A D flip-flop circuit for edge-triggered data storage. The data input is on the top, and the control input is on the right. The data is transferred to the output on the left and bottom on the rising edge of the control input.</p>
+    <img src="images/d-flip-flop.png" alt="D Flip-Flop Circuit">
     <p>4-bit D Latch Circuit<br>
     Description: A 4-bit D latch for storing 4-bit data. The data inputs are on the top (D0-D3) and the control input is on the right. When the control input is active, the data inputs are stored and outputted on the bottom (Q0-Q3).</p>
+    <img src="images/4-bit-d-latch.png" alt="4-bit D Latch Circuit">
     <p>4-bit D Flip-Flop Circuit<br>
     Description: A 4-bit D flip-flop for edge-triggered data storage. The data inputs are on the top (D0-D3) and the control input is on the right. The data is transferred to the output on the bottom (Q0-Q3) on the rising edge of the control input.</p>
+    <img src="images/4-bit-d-flip-flop.png" alt="4-bit D Flip-Flop Circuit">
 
     <h2 id="addition-subtraction-arithmetic-blue">Addition/Subtraction Arithmetic: Blue</h2>
     <p>4-bit Adder Circuit<br>
-    Description: Performs binary addition on two 4-bit numbers. The first 4-bit number inputs are on the left (A0-A3), the second 4-bit number inputs are on the right (B0-B3), and the carry-in input is on the far right. The sum outputs are on the bottom (S0-S3) and the carry-out is on the far left.</p>
-    <p>4-bit Incrementer Circuit<br>
-    Description: Increments 4-bit binary numbers by one. The 4-bit number inputs are on the top (N0-N3), and the increment control input is on the left. The incremented value outputs are on the bottom (Q0-Q3) and the carry-out is on the right.</p>
+    Description: Performs binary addition on two 4-bit numbers. The first 4-bit number inputs are on the left (A0-A3), the second 4-bit number inputs are on the right (B0-B3), and the carry-in input is on the far right. The sum outputs are on the bottom (S0-S3).</p>
+    <img src="images/4-bit-adder.png" alt="4-bit Adder Circuit">
 
     <h2 id="complex-circuits-lavender">Complex Circuits: Lavender</h2>
-    <p>No complex circuits have been added yet.</p>
+    <p>ALU Circuit<br>
+    Description: Arithmetic Logic Unit for performing various arithmetic and logic operations. Includes inputs for operation selection and outputs for result.</p>
+    <img src="images/alu-circuit.png" alt="ALU Circuit">
+    <p>Counter Circuit<br>
+    Description: Counter circuit for counting up or down based on control inputs. Includes outputs for the current count value.</p>
+    <img src="images/counter-circuit.png" alt="Counter Circuit">
 
-    <h2 id="clocks-pink">Clocks</h2>
-    <p>Slow/Medium/Fast/Very Fast Clock<br>
-    Description: Provides a customizable timing signal for synchronizing circuits like D flip flops.</p>
+    <h2 id="clocks-pink">Clocks: Pink</h2>
+    <p>Clock Circuit<br>
+    Description: Generates a regular clock signal for use in synchronous circuits. Includes adjustable frequency settings.</p>
+    <img src="images/clock-circuit.png" alt="Clock Circuit">
 
     <h2 id="misc-and-i-o-brown">Misc and I/O: Brown</h2>
-    <p>4-bit Enabler Circuit<br>
-    Description: If the right enable input is active, the top input data gets copied to the bottom, if the side input is disabled, the output data is empty. The left output mirrors the right enable input.</p>
-    <p>Randomizer<br>
-    Description: Generates random output signals.</p>
-    <p>4-bit Randomizer Circuit<br>
-    Description: Generates random 4-bit output signals on the bottom. Whenever the top input has a rising edge, it generates a new random 4-bit number.</p>
+    <p>Input/Output Interface Circuit<br>
+    Description: Provides interfaces for connecting external inputs and outputs to the circuit.</p>
+    <img src="images/io-interface.png" alt="Input/Output Interface Circuit">
 
     <h2 id="displays-visual-circuits-white">Displays/Visual Circuits: White</h2>
-    <p>Simple Seven Segment Display<br>
-    Description: Displays numerical output using seven segments.</p>
-    <p>Simple Double Seven Segment Display<br>
-    Description: Displays numerical output using two seven-segment displays.</p>
+    <p>7-segment Display Circuit<br>
+    Description: Displays binary or decimal values using a 7-segment display. Includes connections for data input and segment control.</p>
+    <img src="images/7-segment-display.png" alt="7-segment Display Circuit">
+    <p>LED Matrix Display Circuit<br>
+    Description: Provides a matrix of LEDs for visual output. Includes connections for controlling individual LEDs.</p>
+    <img src="images/led-matrix-display.png" alt="LED Matrix Display Circuit">
 </body>
 </html>
