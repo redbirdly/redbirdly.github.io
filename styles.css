@@ -25,7 +25,7 @@ a:hover {
     margin-top: 20px;
 }
 
-.mod {
+.showCaseBox {
     background-color: #1E1E1E; /* Darker background for mod containers */
     border: 1px solid #333333; /* Border color for containers */
     border-radius: 5px;
@@ -33,27 +33,27 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.mod img {
+.showCaseBox img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.mod h3 {
+.showCaseBox h3 {
     margin-top: 0;
     color: #FF0000; /* Red color for mod titles */
 }
 
-.mod p {
+.showCaseBox p {
     font-size: 1em;
 }
 
-.mod a {
+.showCaseBox a {
     display: inline-block;
     margin-top: 10px;
     color: #FF0000; /* Red color for links */
 }
 
-.mod a:hover {
+.showCaseBox a:hover {
     text-decoration: underline;
 }
