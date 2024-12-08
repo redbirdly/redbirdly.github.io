@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text color */
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #FFFFFF; /* White text for headings */
+}
+
+a {
+    color: #FF0000; /* Red color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mods Section */
+#mods {
+    margin-top: 20px;
+}
+
+.showCaseBox {
+    background-color: #1E1E1E; /* Darker background for mod containers */
+    border: 1px solid #333333; /* Border color for containers */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.showCaseBox img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.showCaseBox h3 {
+    margin-top: 0;
+    color: #FF0000; /* Red color for mod titles */
+}
+
+.showCaseBox p {
+    font-size: 1em;
+}
+
+.showCaseBox a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FF0000; /* Red color for links */
+}
+
+.showCaseBox a:hover {
+    text-decoration: underline;
+}
