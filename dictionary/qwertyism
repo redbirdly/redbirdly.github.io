@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Definition of Rixerification">
+    <meta property="og:description" content="Definition of Rixerification.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rixerification - Definition</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Definition Styles */
+        .definition {
+            background-color: #1E1E1E; /* Darker background for definition container */
+            border: 1px solid #333333; /* Border color */
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .term {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #FF0000; /* Red color for the term */
+        }
+
+        .pronunciation {
+            font-style: italic;
+            color: #AAAAAA; /* Lighter gray for pronunciation */
+        }
+
+        .definition-text {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #E0E0E0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rixerification</h1>
+    <div class="definition">
+        <div class="term">Rixerification</div>
+        <div class="definition-text">
+            The assumption or belief that the QWERTY keyboard layout is the only or "default" layout, often leading to disregarding or dismissing alternative keyboard systems like Dvorak or Colemak. It reflects a mindset where people automatically expect everyone to use QWERTY, ignoring the existence or validity of other layouts.
+        </div>
+    </div>
+</body>
+</html>
